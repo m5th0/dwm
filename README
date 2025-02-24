@@ -1,1 +1,28 @@
-this is my build of suckless's dwm
+			IMPORTANT
+--------------------------------------------------------
+
+the new clients always attach aside the master
+hence the slave no1 as i like to understand it.
+
+--------------------------------------------------------
+			INSTALLATION
+--------------------------------------------------------
+
+After cloning this repo, run as root:
+	make clean install
+
+this should install dwm, then add it to your 
+.xinitrc to run with startx
+
+--------------------------------------------------------
+			STATUS BAR
+--------------------------------------------------------
+you can update the status info of your bar by
+adding the following to your .xinitrc:
+
+while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
+do
+sleep 1
+done &
+
+howeveer using dwmblocks is highly recommended
