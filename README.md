@@ -22,6 +22,6 @@ sudo make clean install
 configuration is done by editing the config.h file and then re-compiling
 
 **Status Bar:** this build of dwm uses dwmblocks for statusbar however you can change it by editing-
-	#define STATUSBAR "dwmblocks"
+```#define STATUSBAR "dwmblocks"```
 in the config.h file 
 
