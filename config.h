@@ -68,14 +68,12 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *emojicmd[] = { "rofi", "-modi", "emoji" , "-show", "emoji", NULL };
 static const char *rangercmd[] = { "st", "-e", "/usr/bin/ranger", NULL };
 static const char *sysupdatecmd[] = { "st", "-e", "dw-update", NULL };
-static const char *freetubecmd[] = { "freetube", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ControlMask|ShiftMask, XK_u,	   spawn,	   {.v = sysupdatecmd } },
 	{ MODKEY,                       XK_z,      spawn,          {.v = rangercmd } },
-	{ MODKEY,			XK_y,	   spawn,	   {.v = freetubecmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
         { MODKEY,                       XK_e,      spawn,          {.v = emojicmd } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
