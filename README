@@ -1,28 +1,27 @@
-			IMPORTANT
---------------------------------------------------------
+### IMPORTANT
 
-the new clients always attach aside the master
-hence the slave no1 as i like to understand it.
+[dwm](https://dwm.suckless.org/) is a dynamic window manager by suckless.org
 
---------------------------------------------------------
-			INSTALLATION
---------------------------------------------------------
+* this is my build of dwm, for backup purposes however you may install it for ease of life
 
-After cloning this repo, run as root:
-	make clean install
+### Installation
 
-this should install dwm, then add it to your 
-.xinitrc to run with startx
+clone this repository by 
+```bash
+git clone https://github.com/m5th0/dwm.git
+```
+then finally compile this with
+```bash
+sudo make clean install
+```
+**STARTX:** If you want to run dwm by startx, add the following to your .xinitrc:
+	exec dwm
 
---------------------------------------------------------
-			STATUS BAR
---------------------------------------------------------
-you can update the status info of your bar by
-adding the following to your .xinitrc:
+### Configuration
 
-while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
-do
-sleep 1
-done &
+configuration is done by editing the config.h file and then re-compiling
 
-howeveer using dwmblocks is highly recommended
+**Status Bar:** this build of dwm uses dwmblocks for statusbar however you can change it by editing-
+	#define STATUSBAR "dwmblocks"
+in the config.h file 
+
